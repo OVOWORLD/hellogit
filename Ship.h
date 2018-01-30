@@ -34,7 +34,7 @@ void setMaxspeed(float c)
 {
 Maxspeed=c;
 }
-string getMaxspeed(){
+float getMaxspeed(){
 return Maxspeed;
 }
 };
