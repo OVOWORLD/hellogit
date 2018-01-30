@@ -1,0 +1,44 @@
+//Ships.h
+#include<string>
+using namespace std;
+
+Class Ship
+{
+private:
+string Shipname;
+string Shiptype;
+Float Maxspeed;
+
+public:
+Ship(string x, string y, float z)
+{
+setShipname(x);
+setShiptype(y);
+float Maxspeed(z);
+}
+
+void setShipname(string a)
+{
+Shipname = a;
+}
+string getShipname()
+{
+return Shipname;
+}
+
+void setShiptype(string b)
+{
+Shiptype = b;
+}
+string getShiptype;
+}
+
+void setMaxspeed(float c)
+{
+Maxspeed = c;
+}
+float getMaxspeed()
+{
+return Maxspeed;
+}
+};
