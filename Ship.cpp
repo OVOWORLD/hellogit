@@ -2,39 +2,36 @@
 #include<iostream>
 #include<string>
 #include"Ship.h"
-#include<vector>
 using namespace std;
 
-int main(){
-string name;
-string type;
-float num=0;
-
-vector<Ship> Myships;
-cout << "How many ships are registering? " << endl;
-int ships=0;
-cin >> ships;
-
-for(unsigned i=0; i<ships; i++)
+Ship::Ship(string x , string y, float z)
 {
-cout << "Enter the ship's name ";
-cin >> name;
-cout << "Enter the ship's type ";
-cin >> type;
-cout <<"Enter the max speed of the ship ";
-cin >> num;
-
-Ship boat(name, type, num);
-Myships.push_back(boat);
-cout << endl;
+setShipname(x);
+setShiptype(y);
+setMaxspeed(z);
 }
 
-for(unsigned i=0; i<Myships.size();i++)
+void Ship::setShipname(string a)
 {
-cout << "Ship name: " << Myships[i].getShipname() <<endl;
-cout << "Ship type: " << Myships[i].getShiptype() <<endl;
-cout << "Ship maxspeed: " << Myships[i].getMaxspeed() <<endl;
-cout <<endl;
+Shipname=a;
 }
-return 0;
+string Ship::getShipname()
+{
+return Shipname;
+}
+void Ship::setShiptype(string b)
+{
+Shiptype=b;
+}
+string Ship::getShiptype()
+{
+return Shiptype;
+}
+void Ship::setMaxspeed(float c)
+{
+Maxspeed=c;
+}
+float Ship::getMaxspeed()
+{
+return Maxspeed;
 }
